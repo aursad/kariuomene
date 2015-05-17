@@ -1,0 +1,1 @@
+C:\Projects\kariuomene\Kariuomene\Kariuomene.Windows\Kariuomene.Windows.csproj;neutral

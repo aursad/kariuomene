@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id": "alytaus",
+        "nr": 1,
+        "title": "Alytaus regiono sąrašas",
+        "name": "Dainavos apygardos 1-oji rinktinė",
+        "info": "Apima Alytaus miesto bei rajono, Varėnos, Druskininkų, Marijampolės m. ir rajono, Lazdijų, Vilkaviškio ir Kalvarijos rajonų savivaldybes"
+    },
+    {
+        "id": "kauno",
+        "nr": 2,
+        "title": "Kauno regiono sąrašas",
+        "name": "Dariaus ir Girėno apygardos 2-oji rinktinė",
+        "info": "Apima Kauno miesto bei rajono, Prienų, Kaišadorių, Jonavos, Kėdainių, Raseinių, Kazlų Rūdos, Birštono, Jurbarko, Šakių ir Raseinių savivaldybes"
+    },
+    {
+        "id": "klaipedos",
+        "nr": 3,
+        "title": "Klaipėdos regiono sąrašas",
+        "name": "Žemaičių apygardos 3-oji rinktinė",
+        "info": "Apima Klaipėdos miesto ir rajono, Kretingos, Skuodo, Plungės, Rietavo, Palangos, Neringos, Tauragės, Šilalės, Šilutės ir Pagėgių rajonų savivaldybes"
+    },
+    {
+        "id": "panevezio",
+        "nr": 4,
+        "title": "Panevėžio regiono sąrašas",
+        "name": "Vyčio apygardos 5-oji rinktinė",
+        "info": "Apima Panevėžio miesto bei rajono, Pasvalio, Biržų, Kupiškio, Utenos, Rokiškio, Anykščių ir Zarasų rajonų savivaldybes"
+    },
+    {
+        "id": "siauliu",
+        "nr": 5,
+        "title": "Šiaulių regiono sąrašas",
+        "name": "Prisikėlimo apygardos 6-oji rinktinė",
+        "info": "Apima Šiaulių miesto bei rajono, Joniškio, Pakruojo, Radviliškio, Telšių, Akmenės, Mažeikių ir Kelmės rajonų savivaldybes"
+    },
+    {
+        "id": "vilniaus",
+        "nr": 6,
+        "title": "Vilniaus regiono sąrašas",
+        "name": "Didžiosios kovos apygardos 8-oji rinktinė",
+        "info": "Apima Vilniaus miesto bei rajono, Trakų, Elektrėnų, Šalčininkų, Širvintų, Švenčionių, Ukmergės, Visagino, Ignalinos ir Molėtų rajonų savivaldybes"
+    }
+]

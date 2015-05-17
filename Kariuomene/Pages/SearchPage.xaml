@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="Kariuomene.Pages.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kariuomene.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/HubBackgroundComo.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="kariuomenė" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="Paieška" Margin="0,0,0,10" FontSize="30" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ListView>
+                <TextBox x:Name="NameTextBox" HorizontalAlignment="Center" Width="345" Margin="0,0,0,10" PlaceholderText="Vardas" />
+                <TextBox x:Name="LastNameTextBox" Width="345" PlaceholderText="Pavardė" />
+                <DatePicker x:Name="DatePicker" Width="345" Header="Gimimo data" />
+
+                <Grid Margin="0,0,0,10" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Column="0" PlaceholderText="A.k. 000000000" IsReadOnly="True" IsEnabled="False"
+                         InputScope="Number" MaxLength="2" Grid.ColumnSpan="2" Margin="0,0,-226,0" />
+                    <TextBox Grid.Column="1" x:Name="NinTextBox" PlaceholderText="00" 
+                         InputScope="Number" MaxLength="2" Margin="226,0,-343,0" />
+                </Grid>
+            </ListView>
+        </Grid>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="False" x:Name="CommandBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Accept" Label="Ieškoti" Click="SearchButton_OnClick"/>
+                <AppBarButton Icon="Cancel" Label="Atšaukti" Click="CancelButton_OnClick"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Important" Label="Privatumo politika" Click="Toc_OnClick"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

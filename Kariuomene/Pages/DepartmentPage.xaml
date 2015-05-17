@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Kariuomene.Pages.DepartmentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kariuomene.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/HubBackgroundComo.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="kariuomenė" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding RegionTitle}" Margin="0,0,0,10" FontSize="30" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ListView
+                        Margin="0,0,0,0"
+                        ItemsSource="{Binding Department}"
+                        AutomationProperties.AutomationId="ItemGridView"
+                        AutomationProperties.Name="Items In Department"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,9.5,9.5" Background="{ThemeResource ListViewGroupHeaderPressedForegroundThemeBrush}">
+                            <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="60" Width="320"/>
+                            <TextBlock Text="{Binding Title}" 
+                                       Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="29" FontFamily="Moire ExtraBold" FontWeight="Bold"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="False" x:Name="CommandBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Find" Label="Ieškoti"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

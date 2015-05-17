@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="Kariuomene.Pages.RegionListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kariuomene.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/HubBackgroundComo.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="kariuomenė" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Region.Title}" Margin="0,0,0,10" FontSize="30" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <ListView x:Name="ListView"
+						AutomationProperties.AutomationId="ItemListViewSection3"
+						SelectionMode="None"
+						IsItemClickEnabled="False"
+						ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0" Width="200" FontSize="23" Text="{Binding FullName}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                                <TextBlock Grid.Column="1" Margin="20,0,0,0" FontSize="20" VerticalAlignment="Center" Text="{Binding Bdate}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0" Width="50" Text="{Binding Pos}" Style="{ThemeResource ListViewItemContentTextBlockStyle}" Foreground="{ThemeResource PhoneMidBrush}" />
+                                <TextBlock Grid.Column="1" Width="150" Margin="20,0,0,0" Text="{Binding DepartmentTitle}" Style="{ThemeResource ListViewItemContentTextBlockStyle}" Foreground="{ThemeResource PhoneMidBrush}"/>
+                                <TextBlock Grid.Column="2" Margin="20,0,0,0" Text="{Binding Number}" Style="{ThemeResource ListViewItemContentTextBlockStyle}" Foreground="{ThemeResource PhoneMidBrush}"/>
+                            </Grid>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="False">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="PreviousAppBarButton" Icon="Previous" Label="Buvęs" Click="BackToPriviousPage"/>
+                <AppBarButton Icon="Next"  Label="Sekants" Click="OpenNextPage"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

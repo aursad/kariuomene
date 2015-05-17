@@ -1,0 +1,110 @@
+﻿[
+    {
+        "id":  214,
+        "region": "alytaus",
+        "regionnr": 1,
+        "title": "Alytaus RKPKS",
+        "info": "Dainavos apygardos 1-osios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 315) 74 139",
+        "address": "62116 Alytus, Naujoji g. 2-320"
+    },
+    {
+        "id":  216,
+        "region": "alytaus",
+        "regionnr": 1,
+        "title": "Marijampolės KPKP",
+        "info": "Dainavos apygardos 1-osios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 343) 53 581",
+        "address": "68175 Marijampolė, Vilkaviškio g. 2"
+    },
+    {
+        "id":  217,
+        "region": "kauno",
+        "regionnr": 2,
+        "title": "Kauno RKPKS",
+        "info": "Dariaus ir Girėno apygardos 2-osios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 706) 74 306",
+        "address": "44191 Kaunas, Jonavos g. 64"
+    },
+    {
+        "id":  258,
+        "region": "kauno",
+        "regionnr": 2,
+        "title": "Jurbarko KPKP",
+        "info": "Dariaus ir Girėno apygardos 2-osios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 447) 53 471",
+        "address": "74126 Jurbarkas, Vytauto Didžiojo g. 7-1"
+    },
+    {
+        "id":  260,
+        "region": "klaipedos",
+        "regionnr": 3,
+        "title": "Klaipėdos RKPKS",
+        "info": "Žemaičių apygardos 3-iosios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 46) 41 26 11",
+        "address": "92138 Klaipėda, Vytauto g. 5"
+    },
+    {
+        "id":  247,
+        "region": "klaipedos",
+        "regionnr": 3,
+        "title": "Tauragės KPKP",
+        "info": "Žemaičių apygardos 3-iosios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 446) 61 697",
+        "address": "72217 Tauragė, V. Kudirkos g. 9"
+    },
+    {
+        "id":  218,
+        "region": "panevezio",
+        "regionnr": 4,
+        "title": "Panevėžio RKPKS",
+        "info": "Vyčio apygardos 5-osios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 45) 59 43 36",
+        "address": "38176 Panevėžio r. sav., Velžio sen., Dembavos k., Dembavos g. 30"
+    },
+    {
+        "id":  251,
+        "region": "panevezio",
+        "regionnr": 4,
+        "title": "Utenos KPKP",
+        "info": "Vyčio apygardos 5-osios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 389) 59 475",
+        "address": "28142 Utena, Maironio g. 9"
+    },
+    {
+        "id":  219,
+        "region": "siauliu",
+        "regionnr": 5,
+        "title": "Šiaulių RKPKS",
+        "info": "Prisikėlimo apygardos 6-osios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 41) 52 46 82",
+        "address": "76298 Šiauliai, Dvaro g. 77"
+    },
+    {
+        "id":  248,
+        "region": "siauliu",
+        "regionnr": 5,
+        "title": "Telšių KPKP",
+        "info": "Prisikėlimo apygardos 6-osios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 444) 74 886",
+        "address": "87102 Telšiai, Karaliaus Mindaugo g. 1"
+    },
+    {
+        "id":  213,
+        "region": "vilniaus",
+        "regionnr": 6,
+        "title": "Vilniaus RKPKS",
+        "info": "Didžiosios kovo apygardos 8-osios rinktinės Regioninis karo prievolės ir komplektavimo skyrius",
+        "phone": "(8 5) 210 3702",
+        "address": "03215 Vilnius, Mindaugo g. 26"
+    },
+    {
+        "id":  238,
+        "region": "vilniaus",
+        "regionnr": 6,
+        "title": "Molėtų KPKP",
+        "info": "Didžiosios kovo apygardos 8-osios rinktinės Regioninis karo prievolės ir komplektavimo skyriaus Karo prievolės ir komplektavimo poskyris",
+        "phone": "(8 383) 52 963",
+        "address": "33105 Molėtai, Amatų g. 4"
+    }
+	]
