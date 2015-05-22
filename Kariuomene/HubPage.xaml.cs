@@ -1,20 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Windows.ApplicationModel.Background;
+using Windows.ApplicationModel.Resources;
+using Windows.Data.Xml.Dom;
+using Windows.Graphics.Display;
+using Windows.UI.Notifications;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media;
-using Kariuomene.Common;
-using System;
-using Windows.ApplicationModel.Resources;
-using Windows.Graphics.Display;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Hub Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
+using Kariuomene.Common;
 using Kariuomene.DataModel;
 using Kariuomene.Pages;
 using Kariuomene.ViewModel;
+
+// The Hub Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace Kariuomene
 {
@@ -28,19 +31,112 @@ namespace Kariuomene
         private readonly ResourceLoader _resourceLoader = ResourceLoader.GetForCurrentView("Resources");
         private readonly CacheProvider _cacheProvider = new CacheProvider();
         private readonly StatusBar _statusBar = StatusBar.GetForCurrentView();
+        // -- Live tiles
+        private const string TaskName = "KariuomeneTileUpdater";
+        private const string TaskEntry = "Tasks.TileUpdateBackgroundTask";
+        private const string AppbarTileId = "KariuomeneMySecondaryTile";
 
         public HubPage()
         {
             InitializeComponent();
-
             // Hub is only supported in Portrait orientation
             DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
 
             NavigationCacheMode = NavigationCacheMode.Required;
 
+            FeedbackOverlay.VisibilityChanged += FeedbackOverlay_VisibilityChanged;
+
             _navigationHelper = new NavigationHelper(this);
             _navigationHelper.LoadState += NavigationHelper_LoadState;
             _navigationHelper.SaveState += NavigationHelper_SaveState;
+        }
+
+        async void FeedbackOverlay_VisibilityChanged(object sender, EventArgs e)
+        {
+            if (FeedbackOverlay.Visibility == Visibility.Visible)
+            {
+                await _statusBar.HideAsync();
+            }
+            else
+            {
+                await _statusBar.ShowAsync();
+            }
+        }
+
+        private async void RegisterBackgroundTask()
+        {
+            var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+            if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
+                backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
+            {
+                foreach (var task in BackgroundTaskRegistration.AllTasks)
+                {
+                    if (task.Value.Name == TaskName)
+                    {
+                        task.Value.Unregister(true);
+                    }
+                }
+
+                var taskBuilder = new BackgroundTaskBuilder
+                {
+                    Name = TaskName,
+                    TaskEntryPoint = TaskEntry
+                };
+                taskBuilder.SetTrigger(new TimeTrigger(15, false));
+                taskBuilder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));
+                var registration = taskBuilder.Register();
+            }
+        }
+
+        private void UpdateTileWithTextWithStringManipulation(int sauktiniu)
+        {
+            TileUpdateManager.CreateTileUpdaterForApplication().Clear();
+            BadgeUpdateManager.CreateBadgeUpdaterForApplication().Clear();
+
+            var tileXmlString = string.Format(@"<tile>
+                          <visual version='3'>
+                            <binding template='TileSquare150x150PeekImageAndText02' fallback='TileSquarePeekImageAndText04'>
+                              <image id='1' src='Assets/Square150x150Logo.scale-100.png' alt='tileImage'/>
+                              <text id='1'>{0}</text>
+                              <text id='2'>{1}</text>
+                            </binding>
+                            <binding template='TileWide310x150PeekImage01' fallback='TileWidePeekImage01'>
+                              <image id='1' src='Assets/Square150x150Logo.scale-100.png' alt='tileImage'/>
+                              <text id='1'>{0}</text>
+                              <text id='2'>{1}</text>
+                            </binding> 
+                          </visual>
+                        </tile>", sauktiniu, "Šauktinių dabar");
+
+            // Create a DOM.
+            var tileDom = new XmlDocument();
+
+            // Load the xml string into the DOM.
+            tileDom.LoadXml(tileXmlString);
+
+            // Create a tile notification.
+            var tile = new TileNotification(tileDom);
+
+            // Send the notification to the application? tile.
+            TileUpdateManager.CreateTileUpdaterForApplication("App").Update(tile);
+        }
+
+        private void UpdateTileWithBadge(int sauktiniuKiekis)
+        {
+            BadgeUpdateManager.CreateBadgeUpdaterForApplication().Clear();
+            var tileXmlString = string.Format("<badge version='1' value='{0}'></badge>", sauktiniuKiekis);
+
+            // Create a DOM.
+            var badgeDom = new XmlDocument();
+
+            // Load the xml string into the DOM.
+            badgeDom.LoadXml(tileXmlString);
+
+            // Create a tile notification.
+            var badge = new BadgeNotification(badgeDom);
+
+            // Send the notification to the application? tile.
+            BadgeUpdateManager.CreateBadgeUpdaterForApplication().Update(badge);
         }
 
         /// <summary>
@@ -73,6 +169,7 @@ namespace Kariuomene
         /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            RegisterBackgroundTask();
             SetCountDown();
 
             var regionsDataModel = new RegionDataModel();
@@ -98,7 +195,7 @@ namespace Kariuomene
                 {
                     Nr = regionDto.Nr,
                     Title = regionDto.Title,
-                    Departments = fullDepartmens.Remove(fullDepartmens.Length-2)
+                    Departments = fullDepartmens.Remove(fullDepartmens.Length - 2)
                 });
             }
 
@@ -149,7 +246,8 @@ namespace Kariuomene
                 sauktiniaiInfo.Naujienos = naujienos.Naujienos;
 
                 DataBinding(sauktiniaiInfo);
-
+                UpdateTileWithTextWithStringManipulation(sauktiniaiInfo.Viso);
+                //UpdateTileWithBadge(sauktiniaiInfo.Viso);
                 _cacheProvider.Write(sauktiniaiInfo);
             }
             finally

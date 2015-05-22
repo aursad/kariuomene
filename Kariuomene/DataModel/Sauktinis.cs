@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Kariuomene.ViewModel;
 
-namespace Kariuomene.DataModel
+namespace Kariuomene
 {
     public class Sauktinis
     {

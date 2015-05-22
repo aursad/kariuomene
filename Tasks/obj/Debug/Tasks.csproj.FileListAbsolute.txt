@@ -1,0 +1,16 @@
+C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\Tasks.dll
+C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\Tasks.pdb
+C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\Tasks.pri
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\Tasks.dll
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\Tasks.pdb
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\priconfig.xml
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\priconfig.xml.intermediate
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\layout.resfiles
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\layout.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\resources.resfiles
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\resources.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\pri.resfiles
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\pri.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\qualifiers.txt
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\qualifiers.txt.intermediate
+C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\MultipleQualifiersPerDimensionFound.txt

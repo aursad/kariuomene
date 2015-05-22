@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RateMyApp</name>
+    </assembly>
+    <members>
+        <member name="T:RateMyApp.Controls.FeedbackOverlay">
+            <summary>
+            The FeedbackOverlay is a user control which can be placed on the 
+            first page in the app. The control must be the last element inside
+            the layout grid and span all rows and columns so it is not obscured.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.Reset">
+            <summary>
+            Reset review and feedback funtionality. Makes notifications active
+            again, for example, after a major application update.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.FeedbackOverlay_Loaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Reset review and feedback funtionality. Makes notifications active
+            again, for example, after a major application update.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.AttachBackKeyPressed">
+            <summary>
+            Detect back key presses.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.FeedbackOverlay_BackKeyPress(System.Object,Windows.Phone.UI.Input.BackPressedEventArgs)">
+            <summary>
+            Handle back key presses.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.SetupFirstMessage">
+            <summary>
+            Set up first review message shown after FirstCount launches.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.SetupSecondMessage">
+            <summary>
+            Set up second review message shown after SecondCount launches.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.SetupFeedbackMessage">
+            <summary>
+            Set up feedback message shown after first review message.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.noButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when no button is pressed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.OnNoClick">
+            <summary>
+            Handle no button presses.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.hideContent_Completed(System.Object,System.Object)">
+            <summary>
+            Called when notification gets hidden.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.ShowFeedback">
+            <summary>
+            Show feedback message.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.yesButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when yes button is pressed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.Review">
+            <summary>
+            Launch market place review.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.Feedback">
+            <summary>
+            Launch feedback email.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.SetVisibility(System.Boolean)">
+            <summary>
+            Set review/feedback notification visibility.
+            </summary>
+            <param name="visible">True to set visible, otherwise False.</param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.OnVisibilityChanged">
+            <summary>
+            Called when visibility changes.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.PreparePanoramaPivot(System.Boolean)">
+            <summary>
+            Prepare underlaying Pivot and Panorama controls if such exist.
+            
+            Pivot and Panorama capture touch gestures and remain active even
+            when overlaid with a UserControl. When FeedbackOverlay is shown,
+            touch events for pivot and panorama controls are disabled, and
+            they are enabled again after FeedbackOverlay is hidden.
+            </summary>
+            <param name="hitTestVisible">True to set visible, otherwise False.</param>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.OverrideLanguage">
+            <summary>
+            Override default assembly dependent localization for the control
+            with another culture supported by the application and the library.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Controls.FeedbackOverlay.GetApplicationName">
+            <summary>
+            Get application name.
+            </summary>
+            <returns>Name of the application.</returns>
+        </member>
+        <member name="T:RateMyApp.Helpers.FeedbackHelper">
+            <summary>
+            This helper class controls the behaviour of the FeedbackOverlay control.
+            When the app has been launched FirstCount times the initial prompt is shown.
+            If the user reviews no more prompts are shown. When the app has been
+            launched SecondCount times and not been reviewed, the prompt is shown.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.Launching">
+            <summary>
+            Called when FeedbackLayout control is instantiated, which is
+            supposed to happen when application's main page is instantiated.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.Reviewed">
+            <summary>
+            Call when user has reviewed.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.Reset">
+            <summary>
+            Reset review and feedback launch counter and review state.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.LoadState">
+            <summary>
+            Loads last state from storage and works out the new state.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.FeedbackHelper.StoreState">
+            <summary>
+            Stores current state.
+            </summary>
+        </member>
+        <member name="T:RateMyApp.Helpers.StorageHelper">
+            <summary>
+            This helper class can be used to create, store, retrieve and
+            remove settings in IsolatedStorageSettings.
+            </summary>
+        </member>
+        <member name="M:RateMyApp.Helpers.StorageHelper.StoreSetting(System.String,System.Object,System.Boolean)">
+            <summary>
+            Stores the given key value pair.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="overwrite">If true, will overwrite the existing value.</param>
+            <returns>True if success, false otherwise.</returns>
+        </member>
+        <member name="M:RateMyApp.Helpers.StorageHelper.GetSetting``1(System.String)">
+            <summary>
+            Retrieves a setting matching the given key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns>The value for the key or a default value if key is not found.</returns>
+        </member>
+        <member name="M:RateMyApp.Helpers.StorageHelper.GetSetting``1(System.String,``0)">
+            <summary>
+            Retrieves a setting matching the given key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns>The value for the key or the default value if key is not found.</returns>
+        </member>
+        <member name="M:RateMyApp.Helpers.StorageHelper.RemoveSetting(System.String)">
+            <summary>
+            Removes a setting from IsolatedStorageSettings.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:RateMyApp.LocalizedStrings">
+            <summary>
+            Provides access to string resources.
+            </summary>
+        </member>
+        <member name="T:RateMyApp.Resources.AppResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackBody">
+             <summary>
+               Looks up a localized string similar to [Your feedback here]
+            
+            
+            ---------------------------------
+            Device Name: {0}
+            Device Manufacturer: {1}
+            Device Firmware Version: {2}
+            Device Hardware Version: {3}
+            Application Version: {4}
+            ---------------------------------
+            Note: This e-mail exchange is governed by {5}’s Terms and conditions and Privacy guidelines. Find more details via the About section of the application..
+             </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackMessage1">
+             <summary>
+               Looks up a localized string similar to Sorry to hear you didn&apos;t want to rate {0}.
+            
+            Tell us about your experience or suggest how we can make it even better..
+             </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackNo">
+            <summary>
+              Looks up a localized string similar to no thanks.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackSubject">
+            <summary>
+              Looks up a localized string similar to {0} Customer Feedback .
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackTitle">
+            <summary>
+              Looks up a localized string similar to Can we make it better?.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.FeedbackYes">
+            <summary>
+              Looks up a localized string similar to give feedback.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.RatingMessage1">
+             <summary>
+               Looks up a localized string similar to We&apos;d love you to rate our app 5 stars.
+            
+            Showing us some love on the store helps us to continue to work on the app and make things even better!.
+             </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.RatingMessage2">
+             <summary>
+               Looks up a localized string similar to You look to be getting a lot of use out of our application!
+            
+            Why not give us a 5 star rating to show your appreciation?.
+             </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.RatingNo">
+            <summary>
+              Looks up a localized string similar to no thanks.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.RatingTitle">
+            <summary>
+              Looks up a localized string similar to Enjoying {0}?.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.RatingYes">
+            <summary>
+              Looks up a localized string similar to rate 5 stars.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.ResourceFlowDirection">
+            <summary>
+              Looks up a localized string similar to LeftToRight.
+            </summary>
+        </member>
+        <member name="P:RateMyApp.Resources.AppResources.ResourceLanguage">
+            <summary>
+              Looks up a localized string similar to en-US.
+            </summary>
+        </member>
+    </members>
+</doc>

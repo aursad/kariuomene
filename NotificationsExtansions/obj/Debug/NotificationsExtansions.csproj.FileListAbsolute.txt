@@ -1,0 +1,16 @@
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\bin\Debug\NotificationsExtansions.dll
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\bin\Debug\NotificationsExtansions.pdb
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\bin\Debug\NotificationsExtansions.pri
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\NotificationsExtansions.dll
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\NotificationsExtansions.pdb
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\priconfig.xml
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\priconfig.xml.intermediate
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\layout.resfiles
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\layout.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\resources.resfiles
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\resources.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\pri.resfiles
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\pri.resfiles.intermediate
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\qualifiers.txt
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\qualifiers.txt.intermediate
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\obj\Debug\MultipleQualifiersPerDimensionFound.txt

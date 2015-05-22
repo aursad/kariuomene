@@ -93,6 +93,7 @@
     <Compile Include="DataModel\KurKreiptisDataModel.cs" />
     <Compile Include="DataModel\DepartmentDataModel.cs" />
     <Compile Include="DataModel\RegionDataModel.cs" />
+    <Compile Include="DataModel\Sauktinis.cs" />
     <Compile Include="Pages\DepartmentPage.xaml.cs">
       <DependentUpon>DepartmentPage.xaml</DependentUpon>
     </Compile>
@@ -112,7 +113,6 @@
     <Compile Include="ViewModel\NaujienaModel.cs" />
     <Compile Include="DataModel\Naujienos.cs" />
     <Compile Include="ViewModel\NaujienosDataModel.cs" />
-    <Compile Include="DataModel\Sauktinis.cs" />
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
@@ -197,12 +197,25 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="RateMyApp">
+      <HintPath>..\packages\RateMyApp.1.2.4-alpha\lib\wpa81\RateMyApp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationsExtansions\NotificationsExtansions.csproj">
+      <Project>{db8c3c1d-c0e7-414f-aa57-bfc5dc25f775}</Project>
+      <Name>NotificationsExtansions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tasks\Tasks.csproj">
+      <Project>{5c4138c0-8572-442b-a14a-32ee13a898b1}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

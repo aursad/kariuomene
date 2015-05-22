@@ -4,6 +4,7 @@ using Kariuomene.Common;
 using System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using RateMyApp.Helpers;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -68,9 +69,9 @@ namespace Kariuomene.Pages
             await Launcher.LaunchUriAsync(new Uri("http://www.karys.lt/"));
         }        
 
-        private async void GoToMarketFeedback(object sender, RoutedEventArgs e)
+        private void GoToMarketFeedback(object sender, RoutedEventArgs e)
         {
-            await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + App.AppId));
+            FeedbackHelper.Default.Review();
         }
     }
 }

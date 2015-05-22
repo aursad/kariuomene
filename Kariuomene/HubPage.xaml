@@ -6,12 +6,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Class="Kariuomene.HubPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    xmlns:rma="using:RateMyApp.Controls"
     mc:Ignorable="d">
 
     <Page.Resources>
         <DataTemplate x:Key="HubSectionHeaderTemplate">
             <TextBlock Margin="0,0,0,-9.5" Text="{Binding}"/>
         </DataTemplate>
+
     </Page.Resources>
 
 
@@ -136,12 +138,19 @@
             </HubSection>
         </Hub>
 
+        <rma:FeedbackOverlay x:Uid="RMA" x:Name="FeedbackOverlay"
+                             LanguageOverride="lt-LT"
+                             Grid.RowSpan="2"
+                             FeedbackTo="aurimas.sadauskas@gmail.com"
+                             ApplicationName="Kariuomenė"
+                             CompanyName="Kariuomenė Aplikacija"/>
+
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar IsOpen="False" x:Name="CommandBar">
+        <CommandBar IsOpen="False" x:Name="ApplicationBar">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Icon="Sync" Label="Atnaujinti" Click="Refresh_OnClick"/>
                 <AppBarButton Icon="Find" Label="Ieškoti" Click="Search_OnClick"/>
+                <AppBarButton Icon="Sync" Label="Atnaujinti" Click="Refresh_OnClick"/>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="Important" Label="apie" Click="AboutPage_OnClick"/>

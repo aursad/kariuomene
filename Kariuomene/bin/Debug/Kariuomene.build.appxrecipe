@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>VISMA-SADAUAUR</Machine>
+    <WindowsUser>sadauaur</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>69540477-f0b3-43f1-81da-149a649f73d8</PackageIdentityName>
+    <IntermediateOutputPath>C:\Projects\kariuomene\Kariuomene\Kariuomene\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Kariuomene.exe">
+      <PackagePath>Kariuomene.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll">
+      <PackagePath>HtmlAgilityPack.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\bin\Debug\NotificationsExtansions.dll">
+      <PackagePath>NotificationsExtansions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\RateMyApp.dll">
+      <PackagePath>RateMyApp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\Tasks.dll">
+      <PackagePath>Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\ar-SA\RateMyApp.resources.dll">
+      <PackagePath>ar-SA\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\de-DE\RateMyApp.resources.dll">
+      <PackagePath>de-DE\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\en-GB\RateMyApp.resources.dll">
+      <PackagePath>en-GB\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\en-US\RateMyApp.resources.dll">
+      <PackagePath>en-US\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\es-ES\RateMyApp.resources.dll">
+      <PackagePath>es-ES\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\fi-FI\RateMyApp.resources.dll">
+      <PackagePath>fi-FI\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\fr-FR\RateMyApp.resources.dll">
+      <PackagePath>fr-FR\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\he-IL\RateMyApp.resources.dll">
+      <PackagePath>he-IL\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\hr-HR\RateMyApp.resources.dll">
+      <PackagePath>hr-HR\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\hu-HU\RateMyApp.resources.dll">
+      <PackagePath>hu-HU\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\it-IT\RateMyApp.resources.dll">
+      <PackagePath>it-IT\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\lt-LT\RateMyApp.resources.dll">
+      <PackagePath>lt-LT\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\nb-NO\RateMyApp.resources.dll">
+      <PackagePath>nb-NO\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\nl-NL\RateMyApp.resources.dll">
+      <PackagePath>nl-NL\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\pl-PL\RateMyApp.resources.dll">
+      <PackagePath>pl-PL\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\pt-BR\RateMyApp.resources.dll">
+      <PackagePath>pt-BR\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\pt-PT\RateMyApp.resources.dll">
+      <PackagePath>pt-PT\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\ro-RO\RateMyApp.resources.dll">
+      <PackagePath>ro-RO\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\ru-RU\RateMyApp.resources.dll">
+      <PackagePath>ru-RU\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\sl-SI\RateMyApp.resources.dll">
+      <PackagePath>sl-SI\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\sv-SE\RateMyApp.resources.dll">
+      <PackagePath>sv-SE\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\uk-UA\RateMyApp.resources.dll">
+      <PackagePath>uk-UA\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\vi-VN\RateMyApp.resources.dll">
+      <PackagePath>vi-VN\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\zh-CN\RateMyApp.resources.dll">
+      <PackagePath>zh-CN\RateMyApp.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\HubBackgroundComo.theme-dark.png">
+      <PackagePath>Assets\HubBackgroundComo.theme-dark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\HubBackgroundComo.theme-light.png">
+      <PackagePath>Assets\HubBackgroundComo.theme-light.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\SplashScreen.scale-100.jpg">
+      <PackagePath>Assets\SplashScreen.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\regionsData.json">
+      <PackagePath>Assets\regionsData.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\Assets\departmentData.json">
+      <PackagePath>Assets\departmentData.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\HubPage.xbf">
+      <PackagePath>HubPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\AboutPage.xbf">
+      <PackagePath>Pages\AboutPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\DepartmentPage.xbf">
+      <PackagePath>Pages\DepartmentPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\KurKreiptis.xbf">
+      <PackagePath>Pages\KurKreiptis.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\NaujienaPage.xbf">
+      <PackagePath>Pages\NaujienaPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\RegionListPage.xbf">
+      <PackagePath>Pages\RegionListPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\SearchDetailsPage.xbf">
+      <PackagePath>Pages\SearchDetailsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Pages\SearchPage.xbf">
+      <PackagePath>Pages\SearchPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\Kariuomene.xr.xml">
+      <PackagePath>Kariuomene.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\RateMyApp\RateMyApp.xr.xml">
+      <PackagePath>RateMyApp\RateMyApp.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\RateMyApp\Controls\FeedbackOverlayXAML.xaml">
+      <PackagePath>RateMyApp\Controls\FeedbackOverlayXAML.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\packages\RateMyApp.1.2.4-alpha\lib\wpa81\RateMyApp\Controls\FeedbackOverlayXAML.xbf">
+      <PackagePath>RateMyApp\Controls\FeedbackOverlayXAML.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\kariuomene\Kariuomene\Kariuomene\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

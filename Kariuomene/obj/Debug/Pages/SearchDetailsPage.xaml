@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="Kariuomene.Pages.SearchDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kariuomene.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/HubBackgroundComo.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="kariuomenė" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="šauktinio informacija" Margin="0,0,0,10" FontSize="30" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,12" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                           FontSize="36" FontWeight="Bold" x:Name="FullNameTextBlock" Text="{Binding FullName}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Gimimo data:"/>
+                    <TextBlock Margin="5,0,0,5" FontSize="20" Text="{Binding SearchInfo.Bdate}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Karo prievolininko kodas:"/>
+                    <TextBlock Margin="5,0,0,5" FontSize="20" Text="{Binding SearchInfo.Number}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Eilės numeris regiono sąraše:"/>
+                    <TextBlock Margin="5,0,0,5" FontSize="20" Text="{Binding SearchInfo.Pos}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Regioninis padalinys:"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" Text="{Binding Region.Name}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Regionas:"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" Text="{Binding Region.Title}"/>
+
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="Informacija apie šaukimo eigą:"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" Text="{Binding SearchInfo.info}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
+

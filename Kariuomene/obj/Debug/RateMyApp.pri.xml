@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="RateMyApp" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="RateMyApp">
+				<NamedResource name="RateMyApp.xr.xml" uri="ms-resource://RateMyApp/Files/RateMyApp/RateMyApp.xr.xml">
+					<Candidate type="Path">
+						<Value>RateMyApp\RateMyApp.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Controls">
+					<NamedResource name="FeedbackOverlayXAML.xaml" uri="ms-resource://RateMyApp/Files/RateMyApp/Controls/FeedbackOverlayXAML.xaml">
+						<Candidate type="Path">
+							<Value>RateMyApp\Controls\FeedbackOverlayXAML.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="FeedbackOverlayXAML.xbf" uri="ms-resource://RateMyApp/Files/RateMyApp/Controls/FeedbackOverlayXAML.xbf">
+						<Candidate type="Path">
+							<Value>RateMyApp\Controls\FeedbackOverlayXAML.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

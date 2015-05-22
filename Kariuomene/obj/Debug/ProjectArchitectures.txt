@@ -1,0 +1,3 @@
+C:\Projects\kariuomene\Kariuomene\Kariuomene\Kariuomene.csproj;neutral
+C:\Projects\kariuomene\Kariuomene\NotificationsExtansions\NotificationsExtansions.csproj;neutral
+C:\Projects\kariuomene\Kariuomene\Tasks\Tasks.csproj;neutral

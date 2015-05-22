@@ -32,7 +32,6 @@ namespace Kariuomene.Pages
             InitializeComponent();
 
             PreviousAppBarButton.Visibility = Visibility.Collapsed;
-            NavigationCacheMode = NavigationCacheMode.Required;
 
             _navigationHelper = new NavigationHelper(this);
             _navigationHelper.LoadState += NavigationHelper_LoadState;
