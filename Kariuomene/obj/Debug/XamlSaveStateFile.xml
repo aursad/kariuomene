@@ -1,10 +1,10 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\projects\kariuomene\kariuomene\kariuomene\obj\debug\intermediatexaml\kariuomene.exe" HashGuid="b3bb7b9d-a1ac-71fd-f96d-da1d8f48a2c4" />
+    <LocalAssembly PathName="c:\projects\kariuomene\kariuomene\kariuomene\obj\debug\intermediatexaml\kariuomene.exe" HashGuid="c962f50f-6637-f685-f7ce-f44e2f7c21ea" />
     <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\packages\htmlagilitypack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+monoandroid+monotouch\htmlagilitypack.dll" HashGuid="365e4636-8cbf-8d2d-3790-d3267e801443" />
     <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\packages\newtonsoft.json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="225745d8-3693-ad6f-ebd5-8845d81f8e0f" />
-    <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\notificationsextansions\bin\debug\notificationsextansions.dll" HashGuid="566da832-395a-ab36-8f28-1bc5268c92e4" />
+    <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\notificationsextansions\bin\debug\notificationsextansions.dll" HashGuid="b4af58ca-db30-c179-fefc-13442e2c2d82" />
     <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\packages\ratemyapp.1.2.4-alpha\lib\wpa81\ratemyapp.dll" HashGuid="78c09766-6cf8-14be-9f7d-a03aba9d15b9" />
-    <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\tasks\bin\debug\tasks.dll" HashGuid="73dd8f71-68c6-f57c-251e-83868e35a2d4" />
+    <ReferenceAssembly PathName="c:\projects\kariuomene\kariuomene\tasks\bin\debug\tasks.dll" HashGuid="c3608dee-84ff-ca37-53c5-e8f426f27ab4" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

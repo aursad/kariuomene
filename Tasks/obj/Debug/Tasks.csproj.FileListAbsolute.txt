@@ -14,3 +14,5 @@ C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\pri.resfiles.intermediate
 C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\qualifiers.txt
 C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\qualifiers.txt.intermediate
 C:\Projects\kariuomene\Kariuomene\Tasks\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\HtmlAgilityPack.dll
+C:\Projects\kariuomene\Kariuomene\Tasks\bin\Debug\HtmlAgilityPack.pdb

@@ -81,51 +81,62 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="App.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\CacheProvider.cs" />
     <Compile Include="Common\ExceptionHandler.cs" />
+    <Compile Include="Common\LoadStateEventArgs.cs" />
+    <Compile Include="Common\LoadStateEventHandler.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SaveStateEventArgs.cs" />
+    <Compile Include="Common\SaveStateEventHandler.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Common\SuspensionManagerException.cs" />
+    <Compile Include="DataModel\DepartmentDto.cs" />
     <Compile Include="DataModel\KurKreiptisDataModel.cs" />
     <Compile Include="DataModel\DepartmentDataModel.cs" />
+    <Compile Include="DataModel\KurKreiptisLocationModel.cs" />
     <Compile Include="DataModel\RegionDataModel.cs" />
+    <Compile Include="DataModel\RegionDto.cs" />
     <Compile Include="DataModel\Sauktinis.cs" />
-    <Compile Include="Pages\DepartmentPage.xaml.cs">
+    <Compile Include="Pages\DepartmentPage.cs">
       <DependentUpon>DepartmentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NaujienaPage.xaml.cs">
+    <Compile Include="Pages\Naujiena.cs">
       <DependentUpon>NaujienaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegionListPage.xaml.cs">
+    <Compile Include="Pages\RegionListPage.cs">
       <DependentUpon>RegionListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SearchDetailsPage.xaml.cs">
+    <Compile Include="Pages\SearchDetailsPage.cs">
       <DependentUpon>SearchDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SearchPage.xaml.cs">
+    <Compile Include="Pages\SearchPage.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Info.cs" />
     <Compile Include="ViewModel\ListRegionViewModel.cs" />
     <Compile Include="ViewModel\NaujienaModel.cs" />
     <Compile Include="DataModel\Naujienos.cs" />
     <Compile Include="ViewModel\NaujienosDataModel.cs" />
-    <Compile Include="HubPage.xaml.cs">
+    <Compile Include="HubPage.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AboutPage.xaml.cs">
+    <Compile Include="Pages\AboutPage.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\KurKreiptis.xaml.cs">
+    <Compile Include="Pages\KurKreiptis.cs">
       <DependentUpon>KurKreiptis.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\HistoricalDataModel.cs" />
     <Compile Include="ViewModel\RinktinesModel.cs" />
     <Compile Include="ViewModel\SauktinisModel.cs" />
+    <Compile Include="ViewModel\SearchDto.cs" />
+    <Compile Include="ViewModel\SearchInfoDto.cs" />
     <Compile Include="ViewModel\SearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

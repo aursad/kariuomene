@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 using Windows.UI.Notifications;
+using HtmlAgilityPack;
 
 namespace Tasks
 {
     public sealed class TileUpdateBackgroundTask : IBackgroundTask
     {
-        public void Run(IBackgroundTaskInstance taskInstance)
+        public async void Run(IBackgroundTaskInstance taskInstance)
         {
-
             Debug.WriteLine("ServicingComplete " + taskInstance.Task.Name + " starting..."); 
             var deferral = taskInstance.GetDeferral();
 
@@ -17,14 +20,37 @@ namespace Tasks
 
             TileUpdateManager.CreateTileUpdaterForApplication().Clear();
             BadgeUpdateManager.CreateBadgeUpdaterForApplication().Clear();
-            // Download the feed.
-            //var feed = await GetMSDNBlogFeed();
 
-            // Update the live tile with the feed items.
-            UpdateTile();
+            var dataRequest = await GetData();
+            UpdateTile(dataRequest);
 
-            // Inform the system that the task is finished.
             deferral.Complete();
+        }
+
+        private async Task<int> GetData()
+        {
+            try
+            {
+                var document = new HtmlDocument();
+                using (var client = new HttpClient())
+                {
+                    document.LoadHtml(await client.GetStringAsync("http://2015.kam.lt/lt/aktuali_informacija_apie_privalomaja_karine_tarnyba/new_2716.html"));
+                }
+
+                return GetVisusSauktinius(document);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Can't receive information.", e);
+            }
+        }
+
+        private int GetVisusSauktinius(HtmlDocument document)
+        {
+            var parsed = document.DocumentNode.Descendants("strong").ToList();
+
+            var parsedDec = parsed.FirstOrDefault(q => q.XPath.Contains("/html[1]/body[1]/div[1]/div[3]/table[1]/tr[1]/td[2]/div[1]/div[1]/div[1]/p[7]/strong[2]"));
+            return Convert.ToInt32(parsedDec.InnerText);
         }
 
         // 
@@ -39,11 +65,8 @@ namespace Tasks
             Debug.WriteLine("ServicingComplete " + sender.Task.Name + " Cancel Requested...");
         }
 
-        private static void UpdateTile()
+        private static void UpdateTile(int sauktiniuKiekis)
         {
-            var rnd = new Random();
-            var sauktiniuKiekis = rnd.Next(2000, 6666); 
-
             var tileXmlString = string.Format(@"<tile>
                           <visual version='3'>
                             <binding template='TileSquare150x150PeekImageAndText02' fallback='TileSquarePeekImageAndText04'>
